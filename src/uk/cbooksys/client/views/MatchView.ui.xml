@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='appCss' type='uk.cbooksys.client.AppCss' />
+	<ui:style>
+	.buttonBar {
+		text-align: right;
+	}
+	
+	.panel{
+		padding: 10px;
+
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.panel}">
+		
+		<g:HTMLPanel width="100%">
+			<table style="float:left;">
+				<tr>
+					<td>
+						<span class="typcn typcn-calendar-outline {appCss.style.smallIcon}" />
+					</td>
+					<td>
+						<g:Label ui:field="slotDateLabel" styleName="{appCss.style.myLabel}" />
+					</td>
+				</tr>
+			</table>
+			<table style="float:right;">
+				<tr>
+					<td>
+						<span class="typcn typcn-time {appCss.style.smallIcon}" />
+					</td>
+					<td>
+						<g:Label ui:field="slotTimeLabel" styleName="{appCss.style.myLabel}" />
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+		
+		<g:VerticalPanel>
+		
+		<g:HorizontalPanel>
+				<g:Image ui:field="userImage" />
+				<g:Image ui:field="opponentImage" />
+					
+		</g:HorizontalPanel>
+		
+		</g:VerticalPanel>
+		
+		
+		<div class="{style.buttonBar}">
+				<g:Button ui:field="cancelBooking" text="Cancel Booking" styleName="button orange" />
+				<g:Button ui:field="updateBooking" text="Update Booking" styleName="button orange" />
+			</div>
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

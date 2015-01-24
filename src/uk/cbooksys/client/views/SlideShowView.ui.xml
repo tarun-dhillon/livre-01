@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+
+	</ui:style>
+
+	<g:HTMLPanel ui:field="slidePanel" styleName="banner">
+		<ul>
+			<li style="background-image: url(/images/club_1/squash.jpg);" />
+			<li style="background-image: url(/images/club_1/tennis.jpg);" />
+			<li style="background-image: url(/images/club_1/gym.jpg);" />
+			<li style="background-image: url(/images/club_1/classes.jpg);" />
+
+
+		</ul>
+
+		<!-- <g:Image styleName ="{style.slideView}" ui:field="slideImage" url="/images/club_1/squash.jpg" 
+			width="10%"/> -->
+		<!-- <br/> -->
+		<!-- <span class="typcn typcn-media-record-outline" /> -->
+		<!-- <span class="typcn typcn-media-record-outline" /> -->
+		<!-- <span class="typcn typcn-media-record-outline" /> -->
+		<!-- <span class="typcn typcn-media-record-outline" /> -->
+		<!-- <span class="typcn typcn-media-record" /> -->
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

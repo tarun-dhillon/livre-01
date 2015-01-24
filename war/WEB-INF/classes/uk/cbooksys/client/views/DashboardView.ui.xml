@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:x="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:my='urn:import:uk.cbooksys.client.views'>
+	<ui:with field='appCss' type='uk.cbooksys.client.AppCss' />
+	<ui:style>
+	.userImage {
+		border-radius: 5px;
+		width: 75px;
+		height: 75px;
+		margin: 0px 2px 0px 2px;
+	}
+	
+	.userText {
+		text-transform: uppercase;
+		text-align: center;
+	}
+	
+	.userDetail {
+		margin: 10px 2px 2px 5px;
+	}
+	
+	.dashboardPanel {
+		width: 100%;
+		border-radius: 2px;
+		border: 0px solid #A0A0A0;
+	}
+	
+	.sportsHeader {
+		text-transform: uppercase;
+		text-align: left;
+	}
+	.buffer{
+		margin-bottom: 5px;
+
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.dashboardPanel}" width="95%">
+		<my:UserView ui:field="memType" />
+
+		<!-- <my:UserView ui:field="squashType"/> -->
+
+		<!-- <g:HTMLPanel ui:field="userVisits">Visits: 23</g:HTMLPanel> -->
+		<!-- <g:HTMLPanel ui:field="userMemSince">Feb 2011</g:HTMLPanel> -->
+
+		<g:VerticalPanel ui:field="upSlotsPanel" styleName="{style.userDetail}" visible="true" width="100%">
+			<g:Label styleName="{appCss.style.mySmallLabel} {style.buffer}">Up Coming Bookings</g:Label>
+<!-- 			<g:HTMLPanel width="100%" styleName="{appCss.style.gDivider}" /> -->
+			<x:DataGrid ui:field="upSlotGrid"  height="200px" />
+		</g:VerticalPanel>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

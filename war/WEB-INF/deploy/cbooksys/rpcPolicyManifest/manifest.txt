@@ -1,0 +1,3 @@
+# Module cbooksys
+# RPC service class, partial path of RPC policy file
+uk.cbooksys.client.services.CBSService, 6D14DD7233E9F0B23E9E0EDC0D61AB0E.gwt.rpc

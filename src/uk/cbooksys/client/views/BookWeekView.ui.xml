@@ -1,0 +1,133 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='appCss' type='uk.cbooksys.client.AppCss' />
+	<ui:style type="uk.cbooksys.client.views.BookWeekView.GridStyle">
+	.weekGrid {
+		width: 95%;
+		border-spacing: 0px;
+		margin-top: 10px;
+		border-radius: 2px;
+		border: 2px solid #F0F0F0;
+	}
+	
+	.colHeader {
+		color: #222;
+		background: #F0F0F0;
+		cursor: auto;
+		border: 0px solid;
+		text-align: center;
+	}
+	
+	.rowHeader {
+		color: #222;
+		background: #F0F0F0;
+		border: 0px solid;
+		text-align: center;
+		width: 100px;
+	}
+	
+	.rowHeader:hover {
+		
+	}
+	
+	.filterPanel {
+		color:#666;
+		text-transform: none;
+	}
+	
+	
+	.highlight {
+		background: #A0A0A0;
+		transition-delay: 0;
+		transition-duration: 1s;
+		transition-property: background;
+		transition-timing-function: ease;
+	}
+	
+	.calIcon {
+		position: right;
+		text-align: right;
+	}
+	
+	.timeIcon {
+		float: left;
+	}
+	
+	.legendPanel {
+		float: right;
+		vertical-align: middle;
+	}
+	
+	.legendPanel td {
+		color: #666;
+		border: 0px solid #F0F0F0;
+		border-radius: 5px;
+		padding-right: 5px; 
+	}
+	</ui:style>
+	<g:ScrollPanel alwaysShowScrollBars="true">
+		<g:HTMLPanel>
+			<g:HorizontalPanel width="95%">
+				<g:HTMLPanel styleName="{style.filterPanel}">
+					
+									
+					<span class="typcn typcn-filter {appCss.style.smallIcon}" />
+					<span>Filter</span>
+					<g:Anchor ui:field="morningFilterLink" styleName="{appCss.style.aLink}">
+						<span class="typcn typcn-weather-sunny {appCss.style.smallIcon}" title="Morning slots" />
+						Moning
+					</g:Anchor>
+					<g:Anchor ui:field="afterNoonFilterLink" styleName="{appCss.style.aLink}">
+						<span class="typcn typcn-weather-partly-sunny {appCss.style.smallIcon}" title="Morning slots" />
+						Afternoon
+					</g:Anchor>
+					<g:Anchor ui:field="eveningFilterLink" styleName="{appCss.style.aLink}">
+						<span class="typcn typcn-weather-night {appCss.style.smallIcon}" title="Evening slots" />
+						Evening
+					</g:Anchor>
+
+				</g:HTMLPanel>
+
+				<g:HTMLPanel styleName="{style.legendPanel}">
+					<table>
+						<tr>
+<!-- 							<td class="{style.available}"> &nbsp;&nbsp;</td> -->
+							<td>
+								<span class="typcn typcn-tick {appCss.style.smallIcon} {appCss.style.available}" />
+								Available
+							</td>
+<!-- 							<td class="{style.partnerUp}">&nbsp;&nbsp;</td> -->
+							<td>
+								<span class="typcn typcn-user-add {appCss.style.smallIcon} {appCss.style.partnerUp}" />
+								Partner Up
+							</td>
+
+<!-- 							<td class="{style.notAvaiable}">&nbsp;&nbsp;</td> -->
+							<td>
+								<span class="typcn typcn-cancel {appCss.style.smallIcon} {appCss.style.notAvailable}" />
+								Not Available
+							</td>
+						</tr>
+					</table>
+				</g:HTMLPanel>
+			</g:HorizontalPanel>
+			<g:Grid ui:field="weekGridHead" styleName="{style.weekGrid}">
+				<g:row>
+					<g:cell styleName="{style.rowHeader}">
+						<div class="{style.timeIcon}">
+							<span class="typcn typcn-time {appCss.style.smallIcon}" />
+						</div>
+						<div class="{style.calIcon}">
+							<span class="typcn typcn-calendar-outline {appCss.style.smallIcon}" />
+						</div>
+					</g:cell>
+				</g:row>
+			</g:Grid>
+			<g:ScrollPanel height="300px" >
+			<g:Grid ui:field="weekGrid" styleName="{style.weekGrid}"/>
+			</g:ScrollPanel>
+
+		</g:HTMLPanel>
+	</g:ScrollPanel>
+</ui:UiBinder> 

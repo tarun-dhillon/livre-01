@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:FileUpload ui:field="uploadFile" />
+		<g:NotificationMole animationDuration="2000" message="I am loading ..." ui:field="notifyMole"></g:NotificationMole>
+		<g:HTMLPanel ui:field="fileUploadPanel">
+			<c:DataGrid ui:field="dataGrid" visible="false" />
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

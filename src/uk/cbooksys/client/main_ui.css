@@ -1,0 +1,217 @@
+	/* Default colours */
+	
+	@def cLinkH #fe7d4d;
+	
+	
+	@def cAvail #fe7d4d;
+	@def cNonAvail #666;
+	@def cPartnerUp #475CAE;
+	
+	@def cLGrey #F0F0F0;
+	@def cMGrey #A0A0A0;
+	@def cHGrey #999;
+	
+	@def cLBlack #666;
+	@def cBlack #222;
+	
+	@def cOragne #fe7d4d;
+		
+	.myPopUpWindow {
+		font-weight: bold;
+		width: 400px;
+		padding: 15px;
+		margin: 5px;
+		background: white;
+	}
+	
+	/* Grid */
+	.dataCell {
+		border-radius: 2px;
+		border: 2px solid cLGrey;
+		cursor: pointer;
+	}
+	
+	.dataCell:hover {
+		cursor: pointer;
+	}
+	
+	.inFocus {
+		border-color: cLBlack;
+	}
+	
+	.outFocus {
+		border: 2px solid cLGrey;
+		border-radius: 2px;
+	}
+	
+	.dataCellNotAvail {
+		background: cMGrey;
+	}
+	
+	/*Labels*/
+	
+	.myLabel {
+		font-size: 14px;
+		color: cBlack;
+		font-weight: bold;
+	}
+	
+	.mySmallLabel {
+		font-size: 12px;
+		color: cBlack;
+		font-weight: bold;
+	}
+	
+	.myTinyLabel {
+		font-size: 10px;
+		color: cBlack;
+		font-weight: bold;
+	}
+	
+	.smallLabel {
+		font-size: 12px;
+		color: cBlack;
+	}
+	
+	.tinyLabel {
+		font-size: 10px;
+		color: cBlack;
+	}
+	
+	
+	
+	
+	.bgLabel{
+		text-transform: none;
+		font-size: 12px;
+		color: cHGrey;
+
+	}
+	
+	.lAvail{
+		color:cAvail;
+	}
+	
+	.lNonAvail{
+		color:cNonAvail;
+	}
+	.lPartnerUp{
+		color:cPartnerUp;
+	}
+	
+	.textInFocus{
+		opacity: 1.0;
+	}
+
+	.textOutFocus{
+		opacity: 0.2;
+	}
+	/* SLOT status icons */
+	.available {
+		color: cAvail;
+		background: white;
+		cursor: pointer;
+		border-radius: 2px;
+		padding: 5px;
+		text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); 
+	}
+	
+	.notAvailable {
+		color: cNonAvail;
+		background: white;
+		cursor: auto;
+		border-radius: 2px;
+		padding: 0px 5px 5px 5px;
+	}
+	
+	.partnerUp {
+		background: white;
+		color: cPartnerUp;
+		cursor: pointer;
+		border-radius: 2px;
+		padding: 5px;
+	}
+	
+	/* Icons*/
+	.microIcon {
+		font-size: 8px;
+	}
+	.tinyIcon {
+		font-size: 16px;
+	}
+	
+	.smallIcon {
+		font-size: 24px;
+	}
+	
+	.mediumIcon{
+		font-size: 30px;
+	}
+	
+	.clickIcon{
+		cursor: pointer;
+	}
+	.clickIcon:hover{
+		color: cLinkH;
+	}
+	
+	/* Table */
+	
+	.myTable {
+		border: 0px solid cHGrey;
+	}
+	
+	.myTable td{
+		border: 0px solid cMGrey;
+		border-radius:2px;
+	}
+	
+	/* Links */
+	
+	.aLink {
+		border: 1px;
+		list-style-type: none;
+		display: inline;
+		margin: 5px;
+		padding: 10px 2px 15px 2px;
+		font-size: 14px;
+		cursor: pointer;
+		font-family: jaf-bernino-sans-narrow-1, jaf-bernino-sans-narrow-2,
+			Calibri, Arial, sans-serif;
+		color: #222;
+		transition-delay: 0s;
+		transition-duration: 0.5s;
+		transition-property: color;
+		transition-timing-function: ease;
+	}
+	
+	
+	.aLink:hover {
+		color: #fe7d4d;
+	}
+	
+	
+	
+	.cLink {
+		color: #fe7d4d;
+	}
+	
+	/* input fields */
+	
+	.inputField {
+		border-radius: 2px;
+		width: 200px;
+		height: 22px;
+		font-size: 14px;
+		padding: 2px;
+	}
+	
+	/* Diver */
+	.oDivider{
+	    margin: 5px 0px 5px 0px;
+		border-top: 2px solid cOragne;
+	}
+	.gDivider{
+	    margin: 5px 0px 5px 0px;
+		border-top: 2px solid cMGrey;
+	}

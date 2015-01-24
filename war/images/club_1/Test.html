@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<script type="text/javascript" language="javascript"
+	src="../../scripts/jquery.min.js"></script>
+<script type="text/javascript" language="javascript"
+	src="../../scripts/unslider.min.js"></script>
+<script type="text/javascript" language="javascript"
+	src="../../scripts/image-scale.min.js"></script>
+
+<title>Insert title here</title>
+
+<style>
+.banner {
+	width: 100%;
+	position: relative;
+	left: 0%;
+	height: 350px;
+	border: 5px solid #222;
+}
+
+.banner li {
+	list-style: none;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 350px;
+}
+
+.banner ul li {
+	float: left;
+}
+
+.banner ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.dots {
+	margin: 0px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	text-align: center;
+	bac
+}
+
+.dots li {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 4px;
+	text-indent: -999em;
+	border: 2px solid #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	opacity: .4;
+	-webkit-transition: background .5s, opacity .5s;
+	-moz-transition: background .5s, opacity .5s;
+	transition: background .5s, opacity .5s;
+}
+
+.dots li.active {
+	background: #fff;
+	opacity: 1;
+}
+</style>
+
+<script>
+
+$(document).ready(function(){ 
+	
+	$('.banner').unslider({
+		speed: 500,               //  The speed to animate each slide (in milliseconds)
+		delay: 3000,              //  The delay between slide animations (in milliseconds)
+		complete: function() {},  //  A function that gets called after every slide animation
+		keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+		dots: true,               //  Display dot navigation
+		fluid: false              //  Support responsive design. May break non-responsive designs
+	});
+	
+	});
+
+
+
+
+
+
+// $(function() {
+// 	  $("img.scale").imageScale();
+// 	});
+</script>
+</head>
+<body>
+	<div class="banner image-container">
+		<ul>
+			<li style="background-image: url(squash.jpg);">Lets play squash
+			</li>
+			<li style="background-image: url(tennis.jpg);">Lets play tennis
+			</li>
+			<li style="background-image: url(gym.jpg);" />
+			<li style="background-image: url(classes.jpg);" />
+
+
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='appCss' type='uk.cbooksys.client.AppCss' />
+	<ui:style>
+	.displayBlock{
+		margin:10px;
+	}
+	.bottomMargin{
+		margin-bottom:5px;
+
+	}
+	</ui:style>
+	<g:HTMLPanel width="100%">
+		<g:VerticalPanel width="100%">
+		
+			<g:HTMLPanel styleName="{style.displayBlock}">
+				<g:HTMLPanel>Generate Random Users</g:HTMLPanel>
+				<g:HTMLPanel width="100%" styleName="{appCss.style.oDivider} {style.bottomMargin}"  />
+				<g:HorizontalPanel>
+					<g:HTMLPanel>
+						<g:TextBox ui:field="noUsersRecords" text="25" />
+						<g:CheckBox ui:field="delUserTable" text="Del Table" />
+						<g:Button ui:field="userExecute" text="Execute" styleName="button orange" />
+					</g:HTMLPanel>
+				</g:HorizontalPanel>
+			</g:HTMLPanel>
+			
+			<g:HTMLPanel styleName="{style.displayBlock}">
+				<g:HTMLPanel>Upload Users (xlsx)</g:HTMLPanel>
+				<g:HTMLPanel width="100%" styleName="{appCss.style.oDivider} {style.bottomMargin}"  />			
+<!-- 				<g:HorizontalPanel width="100%"> -->
+<!-- 					<g:Label ui:field="uploadLabel">Upload file(xlsx)</g:Label> -->
+<!-- 				</g:HorizontalPanel> -->
+				<g:HTMLPanel ui:field="sUploadPanel" />
+			</g:HTMLPanel>
+			
+<!-- 			<g:HTMLPanel styleName="{style.displayBlock}"> -->
+<!-- 				<g:HTMLPanel>Data Grid</g:HTMLPanel> -->
+<!-- 				<g:HTMLPanel width="100%" styleName="{appCss.style.oDivider} {style.bottomMargin}"  />			 -->
+<!-- 				<g:HorizontalPanel ui:field="gridPanel" /> -->
+					
+<!-- 			</g:HTMLPanel> -->
+			
+			<g:HTMLPanel styleName="{style.displayBlock}">
+				<g:HTMLPanel>Generate Slots</g:HTMLPanel>
+				<g:HTMLPanel width="100%" styleName="{appCss.style.oDivider} {style.bottomMargin}"  />
+				<g:HorizontalPanel>
+					<g:HTMLPanel>
+						<g:TextBox ui:field="noSlotRecords" text="25" />
+						<g:CheckBox ui:field="delSlotTable" text="Del Table" />
+						<g:Button ui:field="slotExecute" text="Execute" styleName="button orange" />
+					</g:HTMLPanel>
+				</g:HorizontalPanel>
+			</g:HTMLPanel>
+			
+			
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

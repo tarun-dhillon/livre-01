@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.panel {
+		margin:10px;
+		padding: 10px;
+	}
+	
+	.fbBox {
+		float: left;
+		text-align: center;
+		vertical-align: middle;
+	}
+	
+	.gpBox {
+		float: right;
+		vertical-align: middle;
+		text-align: center;
+	}
+	
+	.line {
+		border: 1px solid #A0A0A0;
+	}
+	
+	.loginButtonIcon {
+		vertical-align: middle;
+		font-size: 22px;
+		border-right: 1px solid;
+	}
+	
+	.socialLogin{
+		margin: 2px;	
+	}
+	
+	.emailLogin{
+		margin: 10px 0px 0px 0px;
+	}
+	
+	.buttonBar{
+		text-align: right;
+	
+	}
+	
+	</ui:style>
+	
+	<g:HTMLPanel styleName="{style.panel}">
+	
+		<div class="{style.socialLogin}">
+			<div class="{style.fbBox}">
+	
+				<g:Button ui:field="fbLogin" styleName="button blue">
+					<span class="typcn typcn-social-facebook {style.loginButtonIcon} blue" />
+					&nbsp;&nbsp;Login using Facebook
+				</g:Button>
+			</div>
+			<div class="{style.gpBox}">
+				<g:Button ui:field="gpLogin" styleName="button red">
+					<span class="typcn typcn-social-google-plus {style.loginButtonIcon} red" />
+					&nbsp;&nbsp;Login using Google
+	
+	
+				</g:Button>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<div class="{style.emailLogin}">
+			<g:TextBox text="Email ID" visibleLength="23" /> &nbsp;&nbsp;
+			<g:PasswordTextBox  text="Password" visibleLength="23"/>
+		</div>
+		<div class="{style.buttonBar}">
+			<br/>
+			
+<!-- 			<g:Button text="Sign Up" styleName="button orange" /> -->
+			<g:Button text="Login" styleName="button orange" />
+		</div>
+
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

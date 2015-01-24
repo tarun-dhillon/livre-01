@@ -1,0 +1,73 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:my='urn:import:uk.cbooksys.client.views'>
+	<ui:with field='appCss' type='uk.cbooksys.client.AppCss' />
+
+
+	<ui:style>
+	.court {
+		width: 100%;
+		padding: 5px;
+		text-align: center;
+	}
+	
+	.buttonBar {
+		text-align: right;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{appCss.style.myPopUpWindow}">
+		<g:HTMLPanel width="100%">
+			<table style="float:left;">
+				<tr>
+					<td>
+						<span class="typcn typcn-calendar-outline {appCss.style.smallIcon}" />
+					</td>
+					<td>
+						<g:Label ui:field="slotDateLabel" styleName="{appCss.style.myLabel}" />
+					</td>
+				</tr>
+			</table>
+			<table style="float:right;">
+				<tr>
+					<td>
+						<span class="typcn typcn-time {appCss.style.smallIcon}" />
+					</td>
+					<td>
+						<g:Label ui:field="slotTime" styleName="{appCss.style.myLabel}" />
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+		<g:Grid ui:field="courtGrid" styleName="{style.court}" />
+
+		<g:HTMLPanel visible="false" ui:field="bookPanel">
+				<g:HTMLPanel>
+					&nbsp;<span class="typcn typcn-user-add {appCss.style.smallIcon}" />
+					<g:CheckBox ui:field="isPartnerUp">Available for 'Partner Up'</g:CheckBox>
+				</g:HTMLPanel>
+				<g:HTMLPanel>
+					<span class="typcn typcn-user {appCss.style.smallIcon}" />
+					<g:SuggestBox ui:field="secondPlayer" width="150"
+						text="User name --or-- Email id" />
+					<g:Button text="Add" styleName="smallButton button orange"
+						ui:field="addUser" />
+				</g:HTMLPanel>
+				<g:HTMLPanel>
+					<g:FlexTable ui:field="userTable" styleName="{appCss.style.myTable}" />
+					<br />
+					<div class="{style.buttonBar}">
+						<g:Button ui:field="bookSlot" text="Book" styleName="button orange" />
+					</div>
+				</g:HTMLPanel>
+		</g:HTMLPanel>
+		<g:HTMLPanel visible="false" ui:field="partnerUpPanel">
+			<my:UserView ui:field="partnerUpView" />
+			<br />
+			<div class="{style.buttonBar}">
+				<g:Button text="Partner Up" styleName="button orange" />
+			</div>
+		</g:HTMLPanel>
+		<br />
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

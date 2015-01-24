@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='appCss' type='uk.cbooksys.client.AppCss' />
+	<ui:style>
+	
+	.righLine{
+		border-right: 2px solid #A0A0A0;
+		padding: 5px;
+	}
+	
+	.righEnd{
+		padding: 5px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HorizontalPanel ui:field="userMemType" visible="false">
+			<g:Label styleName="{style.righLine} {appCss.style.myTinyLabel}">Squash </g:Label>
+			<g:Label styleName="{style.righLine} {appCss.style.myTinyLabel}">Tennis </g:Label>
+			<g:Label styleName="{style.righEnd} {appCss.style.myTinyLabel}">Gym</g:Label>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel ui:field="userSquash" visible="false">
+			<g:VerticalPanel>
+<!-- 				<g:Label styleName="{appCss.style.myTinyLabel}">Intermediate </g:Label> -->
+<!-- 				<g:HTMLPanel width="100%" styleName="{appCss.style.gDivider}"  /> -->
+				<g:HorizontalPanel>
+					<g:Label styleName="{style.righLine} {appCss.style.myTinyLabel}">Intermediate </g:Label>
+					<g:Label styleName="{style.righEnd} {appCss.style.myTinyLabel}">24 matches(67% wins)</g:Label>
+				</g:HorizontalPanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel ui:field="userTennis" visible="false">
+			<g:Label styleName="{style.righLine} {appCss.style.myTinyLabel}">Intermediate </g:Label>
+			<g:Label styleName="{style.righLine} {appCss.style.myTinyLabel}">24 matches ()67% wins)</g:Label>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel ui:field="userGym" visible="false">
+			<g:Label styleName="{style.righLine} {appCss.style.myTinyLabel}">Gym: 20 </g:Label>
+			<g:Label styleName="{style.righLine} {appCss.style.myTinyLabel}">Spinning: 10 </g:Label>
+			<g:Label styleName="{style.righEnd} {appCss.style.myTinyLabel}">Body Pump: 3</g:Label>
+		</g:HorizontalPanel>
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

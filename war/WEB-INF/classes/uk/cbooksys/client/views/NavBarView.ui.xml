@@ -1,0 +1,133 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='appCss' type='uk.cbooksys.client.AppCss' />
+
+	<ui:style field="navStyle">
+	.nav {
+		margin: 0px 20px 0px 0px;
+		background-color: #222;
+	}
+	
+	.myBody {
+		margin: 0px;
+	}
+	
+	.logo {
+		text-align: left;
+		float: left;
+	}
+	
+	.navBar {
+		height: 100px;
+		background-color: #222;
+		width: 100%;
+		text-align: right;
+		padding: 10px;
+		margin: 0px 10px 0px 0px;
+	}
+	
+	.navBar li,.anchorLink {
+		border: 1px;
+		list-style-type: none;
+		display: inline;
+		margin: 5px;
+		padding: 10px 2px 15px 2px;
+		font-size: 14px;
+		cursor: pointer;
+		font-family: jaf-bernino-sans-narrow-1, jaf-bernino-sans-narrow-2,
+			Calibri, Arial, sans-serif;
+		color: white;
+		text-transform: uppercase;
+		transition-delay: 0s;
+		transition-duration: 0.5s;
+		transition-property: color;
+		transition-timing-function: ease;
+	}
+	
+	.navBar li:hover,.anchorLink:hover {
+		color: #fe7d4d;
+		text-decoration: none;
+	}
+	
+	.anchorLink:visited {
+		color: #fe7d4d;
+		text-decoration: underline;
+	}
+	
+	.navLinks {
+		margin: 0px;
+	}
+	</ui:style>
+
+	<!-- // Home, Sports, Gym & Classes, Health & Beauty, Club Hire, Contact 
+		Us -->
+
+	<g:HTMLPanel ui:field="navPanel" styleName="{navStyle.nav}">
+		<div class="{navStyle.navBar}">
+
+			<span class="icon-pcs-logo {navStyle.logo}">
+			</span>
+
+			<ul class="{navStyle.navLinks}">
+				<li>
+					<g:Anchor ui:field="homeLink" styleName="{navStyle.anchorLink}">
+						<span class="typcn typcn-home"></span>
+						Home
+					</g:Anchor>
+				</li>
+					<li>
+						<span class="typcn typcn-leaf"></span>
+						Health &amp; Beauty
+					</li>
+				<li>
+						<span class="typcn typcn-wine"></span>
+						Club Hire
+					</li>
+				<li>	
+					<g:Anchor ui:field="loginLink" styleName="{navStyle.anchorLink}">
+						<span class="typcn typcn-key"></span>
+						Login
+					</g:Anchor>
+				</li>
+				<li>
+					<g:Anchor ui:field="logoutLink" styleName="{navStyle.anchorLink}"
+						visible="false">
+						<span class="typcn typcn-power"></span>
+						Logout
+					</g:Anchor>
+				</li>
+
+			</ul>
+			<g:HTMLPanel ui:field="actionPanel" visible="false">
+				<ul>
+					<li>
+						<g:Anchor ui:field="squashLink" styleName="{navStyle.anchorLink}">
+							<span class="typcn typcn-social-flickr-circular"></span>
+							Squash
+						</g:Anchor>
+					</li>
+					
+					<li>
+						<g:Anchor ui:field="tennisLink" styleName="{navStyle.anchorLink}">
+							<span class="typcn typcn-media-record"></span>
+							Tennis
+						</g:Anchor>
+					</li>
+
+					<li>
+						<span class="typcn typcn-group"></span>
+						Gym &amp; Classes
+					</li>
+						
+					<li>
+						<g:Anchor ui:field="adminLink" styleName="{navStyle.anchorLink}">
+							<span class="typcn typcn-flash"></span>
+							Admin
+						</g:Anchor>
+					</li>					
+				</ul>
+			</g:HTMLPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

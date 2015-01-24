@@ -1,0 +1,2 @@
+serviceClass: uk.cbooksys.client.services.CBSService
+path: 6D14DD7233E9F0B23E9E0EDC0D61AB0E.gwt.rpc

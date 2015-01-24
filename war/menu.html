@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<!-- xlsx.js (C) 2013-2014 SheetJS http://sheetjs.com -->
+<!-- vim: set ts=2: -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JS-XLSX Live Demo</title>
+<style>
+#drop{
+	border:2px dashed #bbb;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:25px;
+	text-align:center;
+	font:20pt bold,"Vollkorn";color:#bbb
+}
+#b64data{
+	width:100%;
+}
+</style>
+</head>
+<body>
+
+<div id="drop">Drop an XLSX file</div>
+<input type="file" name="xlfile" id="xlf" /> 
+<pre id="out"></pre>
+<br />
+<script src="scripts/xlsx/jszip.js"></script>
+<script src="scripts/xlsx/xlsx.js"></script>
+<script src="scripts/xlsx/my.xlsx.js"></script>
+
+</body>
+</html>
